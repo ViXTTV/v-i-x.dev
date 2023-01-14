@@ -49,7 +49,7 @@
 <div style="padding-top: 320px;">
 <center>
 <div id="jez" class="yes"><img style="display: none;" src="https://raw.githubusercontent.com/ViXTTV/vix-tv.viewdns.net/main/d_door_noloop.gif" /></div>
-<button onclick="dooropen()" id="target" style="background-color: transparent; color: white; cursor: pointer; overflow: hidden; background-repeat:no-repeat;  border: none;"><img class="door" src="./d_door_noloop.png"></button>
+<button onclick="dooropen(), snd.play()" id="target" style="background-color: transparent; color: white; cursor: pointer; overflow: hidden; background-repeat:no-repeat;  border: none;"><img class="door" src="./d_door_noloop.png"></button>
 </center>
 </div>
 
@@ -59,6 +59,9 @@
 	<a style="color: white;" href="http://vix-tv.viewdns.net/">Go back.</a>
 </center>
 
+<script>
+var snd = new Audio("d_open.mp3")
+</script>
 <script>
 $(document).ready(function(){
   $('#target').toggle(function(){
