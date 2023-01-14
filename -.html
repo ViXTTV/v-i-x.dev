@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<head>
+	<script src="http://code.jquery.com/jquery-1.7.2.js"></script>
+</head>
+
+<style>
+.zoomin {
+  animation: Zoom 1s;
+}
+@keyframes Zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(30);
+  }
+}
+.appear { animation: fadeIn 5s; }
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-moz-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-o-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-ms-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+</style>
+
+<body bgcolor="black" style="-webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">
+
+<div style="padding-top: 320px;">
+<center>
+<div id="jez" class="yes"><img style="display: none;" src="https://raw.githubusercontent.com/ViXTTV/vix-tv.viewdns.net/main/d_door_noloop.gif" /></div>
+<button onclick="dooropen()" id="target" style="background-color: transparent; color: white; cursor: pointer; overflow: hidden; background-repeat:no-repeat;  border: none;"><img class="door" src="./d_door_noloop.png"></button>
+</center>
+</div>
+
+<center id="t" class="yes" style="display: none;">
+	<h1 style="color: white;">Nothing to see here.</h1>
+	<br>
+	<a style="color: white;" href="http://vix-tv.viewdns.net/">Go back.</a>
+</center>
+
+<script>
+$(document).ready(function(){
+  $('#target').toggle(function(){
+      $('img').attr('src', 'https://raw.githubusercontent.com/ViXTTV/vix-tv.viewdns.net/main/d_door_noloop.gif').show();
+  }, function(){
+      $('img').hide();
+  });
+
+});
+</script>
+<script>
+function dooropen() {
+	document.getElementById('target').style.display="none"
+	setTimeout(function () { zium(); }, 1200);
+}
+function zium() {
+	document.getElementById("jez").classList.remove('yes');
+	document.getElementById("jez").classList.add('zoomin');
+	setTimeout(function () { deletedoor(); }, 300);
+}
+function deletedoor() {
+	document.getElementById("jez").style.display="none"
+	setTimeout(function () { textappear(); }, 1200);
+}
+function textappear() {
+	document.getElementById("t").classList.remove('yes');
+	document.getElementById("t").classList.add('appear');
+	document.getElementById("t").style.display="block"
+}
+</script>
+</body>
