@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="secret.css">
+<html lang="en">
+
+
+<head>
+		<title>vix-tv.viewdns.net</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+
+
+<body>
+
+<center style="padding-top: 120px;">
+	<video id="Eng" width="854" height="480" controls style="display: none; border: 3px solid white;">
+		<source src="http://totalynotserver.ddns.net:3670/api/public/dl/aBFfFrFy?inline=true" type="video/mp4">
+	</video>
+	<video id="Pol" width="854" height="480" controls style="display: none; border: 3px solid white;">
+		<source src="http://totalynotserver.ddns.net:3670/api/public/dl/EqjdZ8ZE?inline=true" type="video/mp4">
+	</video>
+</center>
+
+<center style="position: absolute; margin-left: 760px;">
+	<button width="132" height="84" onclick="PL();" type="image" style="background-color: transparent; cursor: pointer; border: none; margin-right: 120px; margin-top: 100px;"><img width="132" height="84" src="pl.png"></button><button width="132" height="84" id="Eng" onclick="EN();" type="image" style="background-color: transparent; cursor: pointer; border: none;"><img width="132" height="84" src="eng.png"></button>
+</center>
+
+<center>
+	<button onclick="Hide();" style="cursor: pointer; margin-left: 15px; margin-top: 220px;">Hide video / Ukryj film</button>
+</center>
+
+<script>
+function PL() {
+    document.getElementById('Eng').style.display="none"
+    document.getElementById('Pol').style.display="block"
+}
+function EN() {
+    document.getElementById('Pol').style.display="none"
+    document.getElementById('Eng').style.display="block"
+}
+function Hide() {
+    document.getElementById('Pol').style.display="none"
+    document.getElementById('Eng').style.display="none"
+}
+</script>
+
+</body>
+</html>
