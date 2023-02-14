@@ -1,51 +1,27 @@
+<!DOCTYPE html>
+
 <head>
-<title>vix.viewdns.net</title>
+	<title>vix.viewdns.net</title>
+	<script src="http://code.jquery.com/jquery-1.7.2.js"></script>
 </head>
-<body bgcolor="black" style="-webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">
 
 <style>
-
 @font-face {
   font-family: Monofonto;
   src: url(./Monofonto.ttf);
 }
-
-.container {
-    display: none;
+.zoomin {
+  animation: Zoom 1s;
 }
-  
-.container.playing {
-    display: block;
+@keyframes Zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(30);
+  }
 }
-
-h1 {
-  font-size: 25px;
-  font-family: Monofonto;
-}
-
-.tv_but {
-position: relative;
-  top: -131px;
-  margin-left: 329px;
-}
-
-.tv_button {
-position: relative;
-  top: -111px;
-  margin-left: 326px;
-}
-
-.txt {
-position: relative;
-  top: -400px;
-  color: white;
-}
-
-.fade-in { animation: fadeIn 3s; }
-
-.fade-sans { animation: fadeIn 30s; }
-
-.fade-in-image { animation: fadeIn 5s; }
+.appear { animation: fadeIn 5s; }
 
 @keyframes fadeIn {
   0% { opacity: 0; }
@@ -71,55 +47,22 @@ position: relative;
   0% { opacity: 0; }
   100% { opacity: 1; }
 }
-
 </style>
 
-<center>
-    <div class="fade-in-image">
-    <img src="./ttv.png" style="margin-top: 160px;">
-    <div id="tvbut" class="tv_but">
-      <button onclick="parent.location='http://vix.viewdns.net/tf2-2023'" style="font-family: 'Monofonto', monospace; background-color: transparent; color: white; cursor: pointer; overflow: hidden; background-repeat:no-repeat;  border: none; font-size: 100%; width: 12px; height: 12px; margin-right: 324px;"><t>&nbsp;</t></button><button onclick="parent.location='http://vix-tv.viewdns.net/-'" style="margin-right: 20px; font-family: '8bitOperatorPlus-Regular', monospace; background-color: transparent; color: white; cursor: pointer; overflow: hidden; background-repeat:no-repeat; text-align: center;  border: none; margin-top: 20px; font-size: 100%;"><img src="./btn1.png"></button><button onclick="tvbutton(), snd.play()" style="font-family: '8bitOperatorPlus-Regular', monospace; background-color: transparent; color: white; cursor: pointer; overflow: hidden; background-repeat:no-repeat; text-align: center;  border: none; font-size: 100%; margin-right: 335px;"><img src="./tttvvv.png"></button>
-    </div>
-    </div>
-    <div id="tvbutton" class="tv_button" style="display: none;">
-      <button onclick="parent.location='http://vix.viewdns.net/-'" style="margin-right: 20px; font-family: 'Monofonto', monospace; background-color: transparent; color: white; cursor: pointer; overflow: hidden; background-repeat:no-repeat; text-align: center;  border: none; font-size: 100%;"><img src="./btn1.png"></button><img style="margin-left: 4px;" src="./ttvvv.png">
-    </div>
-      <div id="fade-in">
-      <div id="txt" class="txt" style="display: none;">
-      <h1>ViX</h1>
-      <br>
-      <button onclick="parent.location='http://vixsteamaccount.ddns.net'" style="font-family: 'Monofonto', monospace; background-color: transparent; color: white; cursor: pointer; overflow: hidden; background-repeat:no-repeat;  border: none; font-size: 100%"><img src="steam_logo.png"></button>
-      <br>
-      <br>
-      <p>
-      <button onclick="parent.location='http://vixyoutubeaccount.ddns.net'" style="font-family: 'Monofonto', monospace; background-color: transparent; color: white; cursor: pointer; overflow: hidden; background-repeat:no-repeat;  border: none; font-size: 100%"><img src="youtube_logo.png"></button>
-      <br>
-      <br>
-      <p>
-      <button onclick="parent.location='https://discord.gg/JQ89s7TAzA'" style="font-family: 'Monofonto', monospace; background-color: transparent; color: white; cursor: pointer; overflow: hidden; background-repeat:no-repeat;  border: none; font-size: 100%"><img src="discord_logo.png"></button>
-      </div>
-    </div>
-</center>
+<body onload="textappear()" bgcolor="black" style="-webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">
 
-<center>
-<div id="sans">
-<button onclick="parent.location='http://vix.viewdns.net/secret'" id="sanz" style="display: none; font-family: 'Monofonto', monospace; background-color: transparent; color: white; cursor: pointer; overflow: hidden; background-repeat:no-repeat;  border: none; font-size: 100%"><img src="skeleton_head.png"></button>
+<div style="padding-top: 320px;">
 </div>
+
+<center id="t" class="yes" style="display: none; padding-top: 320px;">
+	<h1 style="color: white; font-family: Monofonto;">Website is being reconstructed.</h1>
 </center>
 
 <script>
-var snd = new Audio("btnclick.mp3")
-
-function tvbutton() {
-    document.getElementById('tvbut').style.display="none"
-    document.getElementById('tvbutton').style.display="block"
-    document.getElementById('txt').style.display="block"
-    document.getElementById('fade-in').className = "fade-in"
-    document.getElementById('sans').className = "fade-sans"
-    document.getElementById('sanz').style.display="block"
+function textappear() {
+	document.getElementById("t").classList.remove('yes');
+	document.getElementById("t").classList.add('appear');
+	document.getElementById("t").style.display="block"
 }
 </script>
-
-
-
 </body>
