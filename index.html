@@ -43,7 +43,7 @@
   100% { opacity: 1; }
 }
 
-.float{
+.float {
 	position:fixed;
 	width:30px;
 	height:30px;
@@ -52,10 +52,20 @@
   z-index: 20;
 }
 
+.float2 {
+	position:fixed;
+	width:30px;
+	height:30px;
+	bottom:40px;
+	left:40px;
+  z-index: 20;
+}
+
 
 </style>
 <center margin-top: -8px;>
     <div class="fade-in-image">
+	    <button type="image" class="float2" style="background-color: transparent; cursor: pointer; border: none;"><img style="pointer-events: none;" src="./skeleton_head.png"></button>
       <div id="rain">
         <button onclick="togglerain(), play(), togglePlay()" type="image" class="float" style="background-color: transparent; cursor: pointer; border: none;"><img style="pointer-events: none;" src="./togglerain.png"></button>
       </div>
