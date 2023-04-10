@@ -25,6 +25,31 @@
 
   <!-- All margins and padding must be zero for the canvas to fill the screen. -->
   <style type="text/css">
+.entry {
+      color: white;
+      margin-left: 5px;
+    }
+    
+    .entry:hover {
+      background: white;
+      color: black;
+      margin-left: 5px;
+    }
+    
+    .entry1 {
+      color: white;
+      background-color: transparent;
+      cursor: pointer;
+      border: none;
+    }
+    
+    .entry1:hover {
+      background: white;
+      color: black;
+      cursor: pointer;
+      border: none;
+    }
+
     * {
       padding: 0;
       margin: 0;
@@ -61,7 +86,7 @@
 <body>
   <div id="fb-root"></div>
 
-<div class="float"><a href="http://vix.viewdns.net/" style="color: white; text-decoration:none;"><t>Go back.</t></a></div>
+<div class="float"><a style='font-family: Monofonto, monospace; font-size: 13px; text-decoration: none;' href='http://vix.viewdns.net'><t class='entry1'>[ Go back ]</t></a></div>
 
   <script>
     // Issue a warning if trying to preview an exported project on disk.
