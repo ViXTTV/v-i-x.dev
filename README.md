@@ -7,5 +7,3 @@ http://vix-youtube.ddns.net
 http://vix-steam.ddns.net
 
 https://soundcloud.com/v_i_x/
-
-https://discord.gg/ek9uUeNNPA
