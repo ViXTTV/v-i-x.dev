@@ -1,0 +1,60 @@
+<html lang="en">
+    <head>
+        <title>404</title>
+        <link href="404/404.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <main>
+            <script src="js/jquery.slim.min.js"></script>
+            <script src="js/howler.min.js"></script>
+            <div id="center">
+                <div class="err" id="Play">
+                    <img id="img1" class="err1" src="404/404.png" onclick="error()">
+                    <img id="img2" style="display: none;" src="404/4O4.png" onclick="error()">
+                </div>
+            </div>
+
+            <audio id="audio" src="404/404.mp3" type="audio/mp3" loop style="display: none;"></audio>
+
+            <style>
+            .err {
+                min-width: 320px;
+                max-width: 100%;
+                min-height: 320px;
+                max-height: 100%;
+                position: relative;
+                color: black;
+                cursor: pointer;
+            }
+
+            .err img {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+            }
+            
+            </style>
+            <script>
+            document.getElementById("Play").onclick = function() {
+                var audio = document.getElementById("audio");
+                if (audio.paused) audio.play();
+                else audio.pause();
+            };
+            </script>
+            <script>
+            function error() {
+            if($('#img1').css('display') === 'block')
+            {
+            document.getElementById('img1').style.display = 'none';
+            document.getElementById('img2').style.display = 'block';
+            }
+            else
+            {
+            document.getElementById('img2').style.display = 'none';
+            document.getElementById('img1').style.display = 'block';
+            }
+            }
+            </script>
+            </main>
+</body></html>
