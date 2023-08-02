@@ -98,6 +98,10 @@
 
     .fade-in { animation: fade--In 4s; }
 
+    .fade-inn { animation: fade--In 2s; }
+
+    .fade-out { animation: fadeOut 2s; }
+
     @keyframes fade--In {
       from {
         opacity: 0;
@@ -318,6 +322,14 @@ p {
     opacity: 0;
   }
 }
+
+.bottom-button {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 30px;
+  }
+
   </style>
 </head>
 
@@ -340,6 +352,7 @@ p {
     <div class="stars"></div>
   </div>
   <div id="page" class="page" style="margin-top: 15%; display: none;">
+  <div id="tbg">
         <t style="color: white; font-family: Dosis-ExtraLight; font-size: 5em;">ViX</t>
         <br>
         <a href="http://vix-youtube.ddns.net" target="_blank" style="text-decoration: none;"><t style="color: white; font-family: Dosis-ExtraLight; font-size: 1.2em;">Youtube</t></a>
@@ -352,6 +365,8 @@ p {
       <br>
       <br>
         <a href="http://vix.viewdns.net/game" target="_blank" style="text-decoration: none;"><t style="color: white; font-family: Dosis-ExtraLight; font-size: 1.2em;">Game</t></a>
+    </div>
+    <button onclick="togglebg()" id="bg-btn" class="bottom-button" style="color: white; font-family: Dosis-ExtraLight; font-size: 1.2em; background-color: transparent; background-repeat: no-repeat; border: none; cursor: pointer; overflow: hidden; outline: none;">Toggle Only Background</button>
   </div>
 
   <script>
@@ -362,6 +377,20 @@ p {
     setTimeout(function() { document.getElementById('Body').classList.remove('fade-in') }, 14750);
     setTimeout(function() { document.getElementById('term').style.display = 'none' }, 10500);
     setTimeout(function() { document.getElementById('loader').style.display = 'none' }, 10500);
+  }
+  function togglebg() {
+    document.getElementById('tbg').classList.add('fade-out')
+    document.getElementById('bg-btn').classList.add('fade-out')
+    setTimeout(function() { document.getElementById('tbg').classList.remove('fade-out') }, 2000);
+    setTimeout(function() { document.getElementById('bg-btn').classList.remove('fade-out') }, 2000);
+    setTimeout(function() { document.getElementById('tbg').style.display = 'none' }, 2000);
+    setTimeout(function() { document.getElementById('bg-btn').style.display = 'none' }, 1999);
+  }
+
+  function untogglebg() {
+    document.getElementById('tbg').classList.add('fade-inn')
+    setTimeout(function() { document.getElementById('tbg').classList.remove('fade-inn') }, 2000);
+    setTimeout(function() { document.getElementById('tbg').style.display = 'block' }, 2000);
   }
   </script>
 
