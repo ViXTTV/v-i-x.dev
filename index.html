@@ -365,9 +365,23 @@ p {
       <br>
       <br>
         <a href="http://vix.viewdns.net/game" target="_blank" style="text-decoration: none;"><t style="color: white; font-family: Dosis-ExtraLight; font-size: 1.2em;">Game</t></a>
+      <br>
+      <br>
+      <button onclick="quote()" id="quote-btn" style="color: white; font-family: Dosis-ExtraLight; font-size: 1.2em; background-color: transparent; background-repeat: no-repeat; border: none; cursor: pointer; overflow: hidden; outline: none;">Quote</button>
     </div>
     <button onclick="togglebg()" id="bg-btn" class="bottom-button" style="color: white; font-family: Dosis-ExtraLight; font-size: 1.2em; background-color: transparent; background-repeat: no-repeat; border: none; cursor: pointer; overflow: hidden; outline: none;">Toggle Only Background</button>
   </div>
+
+  <center id="quote-div" class="page" style="margin-top: 15%; display: none; text-align: center;">
+          <t id="qt1" style="color: white; font-family: Dosis-ExtraLight; font-size: 1.2em; display: none;">A wise man once said:</t>
+        <br>
+        <br>
+          <t id="qt2" style="color: white; font-family: Dosis-ExtraLight; font-size: 1.2em; display: none;">" There ain't a problem</t>
+          <t id="qt3" style="color: white; font-family: Dosis-ExtraLight; font-size: 1.2em; display: none;">that a 50. cal can't fix. "</t>
+        <br>
+        <br>
+          <t onclick="quoteback()" id="qt4" style="color: white; font-family: Dosis-ExtraLight; font-size: 1.2em; display: none; cursor: pointer;">Go back</t>
+  </center>
 
   <script>
   function fade() {
@@ -383,8 +397,29 @@ p {
     document.getElementById('bg-btn').classList.add('fade-out')
     setTimeout(function() { document.getElementById('tbg').classList.remove('fade-out') }, 2000);
     setTimeout(function() { document.getElementById('bg-btn').classList.remove('fade-out') }, 2000);
-    setTimeout(function() { document.getElementById('tbg').style.display = 'none' }, 1999);
+    setTimeout(function() { document.getElementById('tbg').style.display = 'none' }, 2000);
     setTimeout(function() { document.getElementById('bg-btn').style.display = 'none' }, 1999);
+  }
+
+  function quote() {
+    document.getElementById('tbg').classList.add('fade-out')
+    document.getElementById('bg-btn').classList.add('fade-out')
+    setTimeout(function() { document.getElementById('tbg').classList.remove('fade-out') }, 2000);
+    setTimeout(function() { document.getElementById('bg-btn').classList.remove('fade-out') }, 2000);
+    setTimeout(function() { document.getElementById('tbg').style.display = 'none' }, 2000);
+    setTimeout(function() { document.getElementById('bg-btn').style.display = 'none' }, 2000);
+
+    setTimeout(function() { document.getElementById('quote-div').classList.add('fade-inn') }, 3000);
+    setTimeout(function() { document.getElementById('quote-div').style.display = 'block' }, 3000);
+
+    setTimeout(function() { document.getElementById('qt1').classList.add('fade-inn') }, 3000);
+    setTimeout(function() { document.getElementById('qt1').style.display = 'block' }, 3000);
+    setTimeout(function() { document.getElementById('qt2').classList.add('fade-inn') }, 5000);
+    setTimeout(function() { document.getElementById('qt2').style.display = 'block' }, 5000);
+    setTimeout(function() { document.getElementById('qt3').classList.add('fade-inn') }, 5000);
+    setTimeout(function() { document.getElementById('qt3').style.display = 'block' }, 5000);
+    setTimeout(function() { document.getElementById('qt4').classList.add('fade-inn') }, 6000);
+    setTimeout(function() { document.getElementById('qt4').style.display = 'block' }, 6000);
   }
 
   function untogglebg() {
@@ -392,8 +427,21 @@ p {
     setTimeout(function() { document.getElementById('tbg').classList.remove('fade-inn') }, 2000);
     setTimeout(function() { document.getElementById('tbg').style.display = 'block' }, 2000);
   }
-  </script>
 
+  function quoteback() {
+    document.getElementById('quote-div').classList.add('fade-out')
+    setTimeout(function() { document.getElementById('quote-div').classList.remove('fade-out') }, 2000);
+    setTimeout(function() { document.getElementById('quote-div').style.display = 'none' }, 2000);
+
+    setTimeout(function() { document.getElementById('tbg').classList.add('fade-inn') }, 3000);
+    setTimeout(function() { document.getElementById('tbg').classList.remove('fade-inn') }, 5000);
+    setTimeout(function() { document.getElementById('bg-btn').classList.add('fade-inn') }, 3000);
+    setTimeout(function() { document.getElementById('bg-btn').classList.remove('fade-inn') }, 5000);
+    setTimeout(function() { document.getElementById('tbg').style.display = 'block' }, 3000);
+    setTimeout(function() { document.getElementById('bg-btn').style.display = 'block' }, 3000);
+  }
+  </script>
+<!--
   <script> 
   document.onkeydown = (e) => {
     if (e.key == 123) {
@@ -413,6 +461,6 @@ p {
     }
   };
   </script>
-
+-->
 </body>
 </html>
