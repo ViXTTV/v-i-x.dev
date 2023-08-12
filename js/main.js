@@ -22,6 +22,7 @@ var configs = (function () {
         date_help: "Print the system date and time.",
         clear_help: "Clear the terminal screen.",
         reboot_help: "Reboot the system.",
+        btf2m_help: "Buff Team Fortress 2 Mercenaries.",
         welcome: "Welcome to vix.viewdns.net!\nTo see the list of available commands execute the 'help' command.\nTo skip text rolling, double click/touch anywhere.",
         internet_explorer_warning: "NOTE: I see you're using internet explorer, this website won't work properly.",
         welcome_file_name: "welcome_message.txt",
@@ -123,6 +124,7 @@ var main = (function () {
         DATE: { value: "date", help: configs.getInstance().date_help },
         CLEAR: { value: "clear", help: configs.getInstance().clear_help },
         REBOOT: { value: "reboot", help: configs.getInstance().reboot_help },
+        BTF2M: { value: "btf2m", help: configs.getInstance().btf2m_help },
     };
 
     var Terminal = function (prompt, cmdLine, output, sidenav, profilePic, user, host, root, outputTimer) {
@@ -280,6 +282,9 @@ var main = (function () {
             case cmds.CLEAR.value:
                 this.clear();
                 break;
+            case cmds.BTF2M.value:
+                this.btf2m();
+                break;
             case cmds.REBOOT.value:
                 this.reboot();
                 break;
@@ -325,6 +330,13 @@ var main = (function () {
     Terminal.prototype.youtube = function () {
         var result = "Youtube has been opened!"
         var link = "https://www.youtube.com/channel/UC6jaKC7DS6X3LvqmHGd1oyA"
+        window.open(link);
+        this.type(result, this.unlock.bind(this));
+    };
+
+    Terminal.prototype.btf2m = function () {
+        var result = "Hope you like them!"
+        var link = "http://vix.viewdns.net/btf2m"
         window.open(link);
         this.type(result, this.unlock.bind(this));
     };
