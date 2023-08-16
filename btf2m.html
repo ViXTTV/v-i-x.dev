@@ -257,7 +257,7 @@
 <body bgcolor="black" style="font-family: Terminal, monospace; font-size: 17pt;">
 <center>
 
-<video style="z-index: 3000; position: relative;" width="80%" height="80%" onloadstart="this.volume=0.4" autoplay controls>
+<video id="bufftf" style="z-index: 3000; position: relative;" width="80%" height="80%" onloadstart="this.volume=0.4" autoplay controls>
   <source src="./video/btf2m.mp4" type="video/mp4">
   Your browser does not support HTML video.
 </video>
@@ -274,6 +274,12 @@ Animation made by
 <div class="flicker"></div>
 <div class="scanlines"></div>
 <div class="noise"></div>
+
+<script>
+let vid = document.getElementById("bufftf");
+vid.autoplay = true;
+vid.load();
+</script>
 
 </center>
 </body> 
