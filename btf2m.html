@@ -254,7 +254,7 @@
     }
 }
 </style>
-<body bgcolor="black" style="font-family: Terminal, monospace; font-size: 17pt;">
+<body onload="playvid()" bgcolor="black" style="font-family: Terminal, monospace; font-size: 17pt;">
 <center>
 
 <video id="bufftf" style="z-index: 3000; position: relative;" width="80%" height="80%" onloadstart="this.volume=0.4" autoplay controls>
@@ -276,9 +276,11 @@ Animation made by
 <div class="noise"></div>
 
 <script>
+function playvid() {
 let vid = document.getElementById("bufftf");
 vid.autoplay = true;
 vid.load();
+}
 </script>
 
 </center>
