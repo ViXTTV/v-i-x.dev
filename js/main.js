@@ -119,7 +119,7 @@ var main = (function () {
         YOUTUBE: { value: "youtube", help: configs.getInstance().youtube_help },
         SOUNDCLOUD: { value: "soundcloud", help: configs.getInstance().soundcloud_help },
         STEAM: { value: "steam", help: configs.getInstance().steam_help },
-        GAME: { value: "game", help: configs.getInstance().game_help },
+        CS: { value: "cs", help: configs.getInstance().cs_help },
         WHOAMI: { value: "whoami", help: configs.getInstance().whoami_help },
         DATE: { value: "date", help: configs.getInstance().date_help },
         CLEAR: { value: "clear", help: configs.getInstance().clear_help },
@@ -276,8 +276,8 @@ var main = (function () {
             case cmds.STEAM.value:
                 this.steam();
                 break;
-            case cmds.GAME.value:
-                this.game();
+            case cmds.CS.value:
+                this.cs();
                 break;
             case cmds.CLEAR.value:
                 this.clear();
@@ -355,9 +355,9 @@ var main = (function () {
         this.type(result, this.unlock.bind(this));
     };
 
-    Terminal.prototype.game = function () {
-        var result = "Game!"
-        var link = "http://vix.viewdns.net/game"
+    Terminal.prototype.cs = function () {
+        var result = "?"
+        var link = "http://vix.viewdns.net/comingsoon"
         window.open(link);
         this.type(result, this.unlock.bind(this));
     };
