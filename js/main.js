@@ -17,7 +17,7 @@ var configs = (function () {
         youtube_help: "Opens ViX's Youtube Channel in a seperate window.",
         soundcloud_help: "Opens ViX's Soundcloud Profile in a seperate window.",
         steam_help: "Opens ViX's Steam Profile in a seperate window.",
-        game_help: "Game.",
+        cs_help: "Coming Soon",
         whoami_help: "Print the user name associated with the current effective user ID and more info.",
         date_help: "Print the system date and time.",
         clear_help: "Clear the terminal screen.",
