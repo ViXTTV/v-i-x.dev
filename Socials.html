@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css.css">
+	<title>vix.viewdns.net</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.charCycle.0.0.1.js"></script>
+	<script src="./script.js"></script>
+	<script src="./text.js"></script>
+	<script>
+	  $(document).ready(function() {
+		$('.jitter').mouseenter(function() {
+		  if ($(this).hasClass('cycling') == false) {
+			$(this).charcycle({
+			  'target': '#text'
+			});
+		  }
+		});
+	  });
+	</script>
+	<script>
+	document.onkeydown = (e) => {
+    if (e.key == 123) {
+        e.preventDefault();
+    }
+    if (e.ctrlKey && e.shiftKey && e.key == 'I') {
+        e.preventDefault();
+    }
+    if (e.ctrlKey && e.shiftKey && e.key == 'C') {
+        e.preventDefault();
+    }
+    if (e.ctrlKey && e.shiftKey && e.key == 'J') {
+        e.preventDefault();
+    }
+    if (e.ctrlKey && e.key == 'U') {
+        e.preventDefault();
+    }
+	};
+	</script>
+</head>
+
+<style>
+::-webkit-scrollbar {
+	width: 0px;
+}
+</style>
+
+<body id="top" oncontextmenu="return false">
+
+	<header>
+		<h1>ViX's Gallery</h1>
+
+		<nav>
+			<div class="nav-wrap">
+				<a href="./index.html"><span>Gallery</span></a>
+				<a href="./socials.html"><span>Socials</span></a>
+				<a href="./-.html"><span>???</span></a>
+			</div>
+		</nav>
+	</header>
+
+	<main>
+
+		<div class="column-wrap">
+		<div class="box main-box" style="height: 420px; width: 380px;">
+			<div class="box-inner">
+				<div class="box toggler frame" style="width: 220px;">
+					<center><a target="_blank" href="https://www.youtube.com/channel/UC6jaKC7DS6X3LvqmHGd1oyA"><img src="./assets/yt.png"></center></a>
+					<center style="margin-top: 30px;"><a target="_blank" href="https://soundcloud.com/v_i_x"><img src="./assets/sd.png" style="height: 68px; width: 68px;"></a></center>
+					<center style="margin-top: 30px;"><a target="_blank" href="https://steamcommunity.com/id/V_i_X/"><img src="./assets/st.png" style="height: 68px; width: 68px;"></a></center>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</main>
+</body>
+</html>
+<!--
+<div class="column-wrap">
+	<div class="box main-box" style="height: 300px;">
+		<div class="box-inner">
+			<div class="box toggler frame">
+				<div class="screw"></div>
+				<div class="toggler-inner" data-toggle="top"></div>
+			</div>
+		</div>
+	</div>
+-->

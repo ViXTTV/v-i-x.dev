@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css.css">
+	<link rel="stylesheet" href="photoswipe.css">
+	<title>vix.viewdns.net</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.charCycle.0.0.1.js"></script>
+	<script src="./script.js"></script>
+	<script src="./text.js"></script>
+	<script type="module">
+		import PhotoSwipeLightbox from 'photoswipe-lightbox.esm.js';
+		const lightbox = new PhotoSwipeLightbox({
+		  gallery: '#my-gallery',
+		  children: 'a',
+		  pswpModule: () => import('photoswipe.esm.js')
+		});
+		lightbox.init();
+		</script>
+	<script>
+	  $(document).ready(function() {
+		$('.jitter').mouseenter(function() {
+		  if ($(this).hasClass('cycling') == false) {
+			$(this).charcycle({
+			  'target': '#text'
+			});
+		  }
+		});
+	  });
+	</script>
+	<script>
+	document.onkeydown = (e) => {
+    if (e.key == 123) {
+        e.preventDefault();
+    }
+    if (e.ctrlKey && e.shiftKey && e.key == 'I') {
+        e.preventDefault();
+    }
+    if (e.ctrlKey && e.shiftKey && e.key == 'C') {
+        e.preventDefault();
+    }
+    if (e.ctrlKey && e.shiftKey && e.key == 'J') {
+        e.preventDefault();
+    }
+    if (e.ctrlKey && e.key == 'U') {
+        e.preventDefault();
+    }
+	};
+	</script>
+</head>
+
+<style>
+::-webkit-scrollbar {
+    width: 0px;
+}
+</style>
+
+<body id="top" oncontextmenu="return false">
+
+	<header>
+		<h1>ViX's Gallery</h1>
+
+		<nav>
+			<div class="nav-wrap">
+				<a href="./index.html"><span>Gallery</span></a>
+				<a href="./socials.html"><span>Socials</span></a>
+				<a href="./-.html"><span>???</span></a>
+			</div>
+		</nav>
+	</header>
+
+	<main>
+		
+		<div class="column-wrap" >
+		<div class="box main-box" style="height: 360px; width: 460px;">
+			<div class="box-inner">
+				<div class="box toggler frame" style="width: 300px;">
+					<a href="./gallery/CarPark.jpg" data-pswp-width="4608" data-pswp-height="3456" target="_blank"><img src="./gallery/CarPark.jpg" alt="" /></a>
+					<!-- <img src="./gallery/CarPark.jpg" style="position: relative;"> -->
+					<center style="padding-top: 5px;"><t style="font-weight: bold; font-size: x-large;">Car Park</t></center>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="box main-box" style="height: 360px; width: 460px;">
+			<div class="box-inner">
+				<div class="box toggler frame" style="width: 300px;">
+					<a href="./gallery/Station.jpg" data-pswp-width="4608" data-pswp-height="3456" target="_blank"><img src="./gallery/Station.jpg" alt="" /></a>
+					<!-- <img src="./gallery/Station.jpg" style="position: relative;"> -->
+					<center style="padding-top: 5px;"><t style="font-weight: bold; font-size: x-large;">Station</t></center>
+					</div>
+				</div>
+			</div>
+
+		<div class="column-wrap">
+		<div class="box main-box" style="height: 360px; width: 460px;">
+			<div class="box-inner">
+				<div class="box toggler frame" style="width: 300px;">
+					<a href="./gallery/Backrooms.jpg" data-pswp-width="4608" data-pswp-height="3456" target="_blank"><img src="./gallery/Backrooms.jpg" alt="" /></a>
+					<!-- <img src="./gallery/Backrooms.jpg" style="position: relative;"> -->
+					<center class="jitter" style="padding-top: 5px;"><a href="./-.html" style="color: #251418; text-decoration: none;"><t style="font-weight: bold; font-size: x-large;" id="text">Backrooms</t></a></center>
+					</div>
+				</div>
+			</div>
+			</div>
+
+			<div class="box main-box" style="height: 360px; width: 460px;">
+				<div class="box-inner">
+					<div class="box toggler frame" style="width: 300px;">
+						<a href="./gallery/House.jpg" data-pswp-width="4608" data-pswp-height="3456" target="_blank"><img src="./gallery/House.jpg" alt="" /></a>
+						<!-- <img src="./gallery/House.jpg" style="position: relative;"> -->
+						<center style="padding-top: 5px;"><t style="font-weight: bold; font-size: x-large;">House</t></center>
+						</div>
+					</div>
+				</div>
+
+				<div class="column-wrap">
+					<div class="box main-box" style="height: 360px; width: 460px;">
+						<div class="box-inner">
+							<div class="box toggler frame" style="width: 300px;">
+								<a href="./gallery/Street.jpg" data-pswp-width="4608" data-pswp-height="3456" target="_blank"><img src="./gallery/Street.jpg" alt="" /></a>
+								<!-- <img src="./gallery/Street.jpg" style="position: relative;"> -->
+								<center style="padding-top: 5px;"><t style="font-weight: bold; font-size: x-large;">Street</t></center>
+								</div>
+							</div>
+						</div>
+						</div>
+			
+						<div class="box main-box" style="height: 360px; width: 460px;">
+							<div class="box-inner">
+								<div class="box toggler frame" style="width: 300px;">
+									<a href="./gallery/Night.jpg" data-pswp-width="4608" data-pswp-height="3456" target="_blank"><img src="./gallery/Night.jpg" alt="" /></a>
+									<!-- <img src="./gallery/Night.jpg" style="position: relative;"> -->
+									<center style="padding-top: 5px;"><t style="font-weight: bold; font-size: x-large;" id="text">Night</t></center>
+									</div>
+								</div>
+							</div>
+							<div class="column-wrap">
+								<div class="box main-box" style="height: 360px; width: 460px;">
+									<div class="box-inner">
+										<div class="box toggler frame" style="width: 300px;">
+											<a href="./gallery/Corridor.jpg" data-pswp-width="1502" data-pswp-height="1126" target="_blank"><img src="./gallery/Corridor.jpg" alt="" /></a>
+											<!-- <img src="./gallery/Corridor.jpg" style="position: relative;"> -->
+											<center style="padding-top: 5px;"><t style="font-weight: bold; font-size: x-large;" id="text">Corridor</t></center>
+											</div>
+										</div>
+									</div>
+									</div>
+						
+									<div class="box main-box" style="height: 360px; width: 460px;">
+										<div class="box-inner">
+											<div class="box toggler frame" style="width: 300px;">
+												<a href="./gallery/BurningSky.jpg" data-pswp-width="4608" data-pswp-height="3456" target="_blank"><img src="./gallery/BurningSky.jpg" alt="" /></a>
+												<!-- <img src="./gallery/BurningSky.jpg" style="position: relative;"> -->
+												<center style="padding-top: 5px;"><t style="font-weight: bold; font-size: x-large;" id="text">Burning Sky</t></center>
+												</div>
+											</div>
+										</div>
+		
+	</main>
+</body>
+</html>
+<!--
+<div class="column-wrap">
+	<div class="box main-box" style="height: 300px;">
+		<div class="box-inner">
+			<div class="box toggler frame">
+				<div class="screw"></div>
+				<div class="toggler-inner" data-toggle="top"></div>
+			</div>
+		</div>
+	</div>
+-->
