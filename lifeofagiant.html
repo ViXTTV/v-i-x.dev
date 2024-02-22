@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body { margin: 0px; background-color: black ; }
+        body { margin: 0px; background-color: black ; oncontextmenu="return false;" }
 
 .background {
     width: 100%;
@@ -38,4 +38,23 @@ div {
     <iframe src="https://drive.google.com/file/d/1tDUpcShQsKmRSbAqiopE-Htei96-RhxM/preview" width="640" height="480" allow="autoplay" frameBorder="0"></iframe>
     </div>
 </body>
+    <script>
+	document.onkeydown = (e) => {
+	if (e.key == 123) {
+		e.preventDefault();
+	}
+	if (e.ctrlKey && e.shiftKey && e.key == 'I') {
+		e.preventDefault();
+	}
+	if (e.ctrlKey && e.shiftKey && e.key == 'C') {
+		e.preventDefault();
+	}
+	if (e.ctrlKey && e.shiftKey && e.key == 'J') {
+		e.preventDefault();
+	}
+	if (e.ctrlKey && e.key == 'U') {
+		e.preventDefault();
+	}
+	};
+	</script>
 </html>
