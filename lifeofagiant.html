@@ -40,6 +40,7 @@ div {
     }
   }
     </style>
+	
 </head>
 <body>
     <div class="content">
@@ -64,5 +65,8 @@ div {
 		e.preventDefault();
 	}
 	};
+	    window.open = function (url, name, features, replace) {
+    document.getElementById('#iframe').src = url;
+}
 	</script>
 </html>
