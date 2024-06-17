@@ -13,5 +13,33 @@
 </style>
 <body bgcolor="black" draggable="false" style="font-family: Monofonto, monospace; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">
 <div>
-<video src="./bucket.mp4" controls>
+<video src="./bucket.mp4" allow="autoplay" allowfullscreen="" controls controlsList="nodownload">
 </div>
+    <script>
+    let vid = document.getElementById("giant");
+    vid.volume = 0.4;
+
+	document.onkeydown = (e) => {
+	if (e.keyCode == 123) {
+		e.preventDefault();
+	}
+	if (e.ctrlKey && e.shiftKey && e.key == 'I') {
+		e.preventDefault();
+	}
+	if (e.ctrlKey && e.shiftKey && e.key == 'C') {
+		e.preventDefault();
+	}
+	if (e.ctrlKey && e.shiftKey && e.key == 'J') {
+		e.preventDefault();
+	}
+	if (e.ctrlKey && e.key == 'U') {
+		e.preventDefault();
+	}
+	};
+	    document.addEventListener('keydown', event => {
+  if (event.keyCode === 123 || (event.ctrlKey && event.shiftKey && event.keyCode === 73)) {
+    event.preventDefault();
+  }
+});
+	</script>
+</body>
