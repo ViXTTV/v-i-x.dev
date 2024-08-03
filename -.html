@@ -1,26 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" oncontextmenu="return false;">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="-.css">
     <title>v-i-x.dev</title>
     <link rel="shortcut icon" href="images/ViX_circle.png">
     <meta property="og:image" content="/ViX_circle.png">
     <meta property="og:image:type" content="image/png">
-</head>
-<style>
-::-webkit-scrollbar {
-	width: 0px;
+    <style>
+        body { margin: 0px; background-color: black ; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+
+.background {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: black ;
 }
-</style>
-<body oncontextmenu="return false;" style="font-family: Font; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;" class="fadein">
-<center class="center-screen">
-	<iframe class="videosize" src="https://www.youtube-nocookie.com/embed/PEHM0G81Fj0?si=RAx0Zy02XYejbClW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-	<br><a class="text-gradient" style="text-decoration: none; font-size: 50px;" href="/">Go back</a>
-</center>
+.content {
+    width: 1080px;
+    height: 810px;
+
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-left:-540px;/* half width*/
+    margin-top:-405px;/* half height*/
+}
+div {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  width: 50%;
+  height: 50%;
+}
+@media only screen and (max-width:1080px) {
+    .content {
+      width: 540px; height: 405px; margin-left: -270px; margin-top: -202.5px;
+    }
+	iframe {
+      width: 540px; height: 405px;
+    }
+video {
+      width: 540px; height: 405px;
+    }
+  }
+
+  @media only screen and (max-width:540px) {
+    .content {
+      width: 270px; height: 202.5px; margin-left: -135px; margin-top: -101.25px;
+    }
+	iframe {
+      width: 270px; height: 202.5px;
+    }
+video {
+      width: 270px; height: 202.5px;
+    }
+  }
+    </style>
+	
+</head>
+<body>
+    <div class="content">
+		<iframe id="backrooms" src="https://www.youtube-nocookie.com/embed/vwW-715MKo4" width="1080" height="810" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
 </body>
-<script>
+    <script>
+    let vid = document.getElementById("backrooms");
+    vid.volume = 0.4;
+
 	document.onkeydown = (e) => {
 	if (e.keyCode == 123) {
 		e.preventDefault();
@@ -38,10 +86,7 @@
 		e.preventDefault();
 	}
 	};
-	</script>
-	<script>
-		document.addEventListener('contextmenu', event => event.preventDefault());
-		document.addEventListener('keydown', event => {
+	    document.addEventListener('keydown', event => {
   if (event.keyCode === 123 || (event.ctrlKey && event.shiftKey && event.keyCode === 73)) {
     event.preventDefault();
   }

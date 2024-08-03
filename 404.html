@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>v-i-x.dev</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <meta name="description" content="v-i-x.dev">
+    <link rel="shortcut icon" href="images/ViX_circle.png">
+    <link rel="stylesheet" href="css/main.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  </head>
+  <style>
+    ::-webkit-scrollbar {
+	width: 0px;
+}
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+@font-face {
+    font-family: Font;
+    src: url("font.ttf");
+}
+.fadein{
+    animation: fadeInAnimation ease 3s;
+}
+
+.inter-<uniquifier> {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+}
+  </style>
+  <body oncontextmenu="return false;" style="font-family: Inter; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;" class="fadein">
+    
+        <t style="margin-top: 14%;">&nbsp;</t>
+        <center style="margin-top: 14%;"><t style="color: white; font-size: 1000%;">404</t></center>
+        <br><br>
+        <center><h1 style="color: white;">The page you are looking for might have been removed,<br>had it's name changed or is temporarily unavailable.</h1></center>
+        <br><br>
+        <center><a href="./"><h2 style="color: white; text-decoration: underline;">Main Page</h2></a></center>
+    
+    <script>
+      document.onkeydown = (e) => {
+      if (e.keyCode == 123) {
+        e.preventDefault();
+      }
+      if (e.ctrlKey && e.shiftKey && e.key == 'I') {
+        e.preventDefault();
+      }
+      if (e.ctrlKey && e.shiftKey && e.key == 'C') {
+        e.preventDefault();
+      }
+      if (e.ctrlKey && e.shiftKey && e.key == 'J') {
+        e.preventDefault();
+      }
+      if (e.ctrlKey && e.key == 'U') {
+        e.preventDefault();
+      }
+      };
+      </script>
+	  
+      <!--<script>
+function addEvent(){
+    document.body.addEventListener("click", play)
+}
+function play() {
+    var audio = document.getElementById("audio");
+    audio.play();
+    setTimeout(function() { document.body.removeEventListener("click", play); }, 1);
+}
+</script>-->
+<script>
+  document.addEventListener('contextmenu', event => event.preventDefault());
+</script>
+<script>
+  document.addEventListener('keydown', event => {
+  if (event.keyCode === 123 || (event.ctrlKey && event.shiftKey && event.keyCode === 73)) {
+    event.preventDefault();
+  }
+});
+</script>
+  
+</body></html>
