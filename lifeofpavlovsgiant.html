@@ -7,8 +7,15 @@
     <link rel="shortcut icon" href="images/ViX_circle.png">
     <meta property="og:image" content="/ViX_circle.png">
     <meta property="og:image:type" content="image/png">
+    <link rel="preconnect" href="https://v-i-x.dev/">
+    <link rel="stylesheet" href="https://v-i-x.dev/font/inter.css">
     <style>
         body { margin: 0px; background-color: black ; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+
+	:root { font-family: 'Inter', sans-serif; }
+       @supports (font-variation-settings: normal) {
+        :root { font-family: 'Inter var', sans-serif; }
+       }
 
 .background {
     width: 100%;
@@ -57,15 +64,11 @@ video {
       width: 270px; height: 202.5px;
     }
   }
-@font-face {
-    font-family: Font;
-    src: url("font.ttf");
-}
     </style>
 	
 </head>
 <body>
-    <div class="content" style="font-family: Font;">
+    <div class="content">
     <video id="giant" src="./TheLifeOfPavlovsGiant100mbVer.mp4" width="1080" height="810" allow="autoplay" allowfullscreen="" controls controlsList="nodownload"></video>
     </div>
 </body>
