@@ -1,6 +1,6 @@
 ViX's Website Files
 
-http://v-i-x.dev
+https://v-i-x.dev
 
 Old domain:
 http://vix.viewdns.net
