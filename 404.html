@@ -7,8 +7,15 @@
     <meta name="description" content="v-i-x.dev">
     <link rel="shortcut icon" href="images/ViX_circle.png">
     <link rel="stylesheet" href="css/main.min.css">
+    <link rel="preconnect" href="https://v-i-x.dev/">
+    <link rel="stylesheet" href="https://v-i-x.dev/font/inter.css">
   </head>
   <style>
+	:root { font-family: 'Inter', sans-serif; }
+       @supports (font-variation-settings: normal) {
+        :root { font-family: 'Inter var', sans-serif; }
+       }
+
     ::-webkit-scrollbar {
 	width: 0px;
 }
@@ -31,16 +38,12 @@
     -ms-user-select: none;
     user-select: none;
 }
-@font-face {
-    font-family: Font;
-    src: url("font.ttf");
-}
 .fadein{
     animation: fadeInAnimation ease 3s;
 }
 
   </style>
-  <body oncontextmenu="return false;" style="font-family: Font; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;" class="fadein">
+  <body oncontextmenu="return false;" -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;" class="fadein">
     
         <t style="margin-top: 14%;">&nbsp;</t>
         <center style="margin-top: 14%;"><t style="color: white; font-size: 1000%;">404</t></center>
