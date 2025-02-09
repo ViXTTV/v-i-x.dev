@@ -8,12 +8,14 @@
     <meta name="description" content="v-i-x.dev">
     <link rel="shortcut icon" href="images/ViX_circle.png">
     <link rel="stylesheet" href="css/core.min.css"/>
+    <link rel="preconnect" href="https://v-i-x.dev/">
+    <link rel="stylesheet" href="https://v-i-x.dev/font/inter.css">
     <style>
-
-    @font-face {
-        font-family: Inter;
-        src: url(Inter.ttf);
-    }
+        
+        :root { font-family: 'Inter', sans-serif; }
+       @supports (font-variation-settings: normal) {
+        :root { font-family: 'Inter var', sans-serif; }
+       }
         
       .center {
         align-items: center;
